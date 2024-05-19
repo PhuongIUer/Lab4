@@ -34,40 +34,40 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Lab4_MNHoang_ITITIU21208
+BUILD_ARTIFACT_NAME := Lab4_TraMinhPhuong_ITITIU21286
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Lab4_MNHoang_ITITIU21208.elf \
+Lab4_TraMinhPhuong_ITITIU21286.elf \
 
 MAP_FILES += \
-Lab4_MNHoang_ITITIU21208.map \
+Lab4_TraMinhPhuong_ITITIU21286.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Lab4_MNHoang_ITITIU21208.list \
+Lab4_TraMinhPhuong_ITITIU21286.list \
 
 OBJCOPY_HEX += \
-Lab4_MNHoang_ITITIU21208.hex \
+Lab4_TraMinhPhuong_ITITIU21286.hex \
 
 OBJCOPY_BIN += \
-Lab4_MNHoang_ITITIU21208.bin \
+Lab4_TraMinhPhuong_ITITIU21286.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Lab4_MNHoang_ITITIU21208.elf secondary-outputs
+main-build: Lab4_TraMinhPhuong_ITITIU21286.elf secondary-outputs
 
 # Tool invocations
-Lab4_MNHoang_ITITIU21208.elf Lab4_MNHoang_ITITIU21208.map: $(OBJS) $(USER_OBJS) D:\OneDrive\ -\ VietNam\ National\ University\ -\ HCM\ INTERNATIONAL\ UNIVERSITY\All\ Codes\STMCubeIDE\ Workspace\Lab4_MNHoang_ITITIU21208\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Lab4_MNHoang_ITITIU21208.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\OneDrive - VietNam National University - HCM INTERNATIONAL UNIVERSITY\All Codes\STMCubeIDE Workspace\Lab4_MNHoang_ITITIU21208\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4_MNHoang_ITITIU21208.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Lab4_TraMinhPhuong_ITITIU21286.elf Lab4_TraMinhPhuong_ITITIU21286.map: $(OBJS) $(USER_OBJS) C:\Users\PC\Downloads\MPS_Lab4_MNHoang_ITITIU21208-main\Lab4_TraMinhPhuong_ITITIU21286\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Lab4_TraMinhPhuong_ITITIU21286.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\PC\Downloads\MPS_Lab4_MNHoang_ITITIU21208-main\Lab4_TraMinhPhuong_ITITIU21286\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab4_TraMinhPhuong_ITITIU21286.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -76,24 +76,24 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Lab4_MNHoang_ITITIU21208.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Lab4_MNHoang_ITITIU21208.list"
+Lab4_TraMinhPhuong_ITITIU21286.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Lab4_TraMinhPhuong_ITITIU21286.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Lab4_MNHoang_ITITIU21208.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Lab4_MNHoang_ITITIU21208.hex"
+Lab4_TraMinhPhuong_ITITIU21286.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Lab4_TraMinhPhuong_ITITIU21286.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Lab4_MNHoang_ITITIU21208.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Lab4_MNHoang_ITITIU21208.bin"
+Lab4_TraMinhPhuong_ITITIU21286.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Lab4_TraMinhPhuong_ITITIU21286.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Lab4_MNHoang_ITITIU21208.bin Lab4_MNHoang_ITITIU21208.elf Lab4_MNHoang_ITITIU21208.hex Lab4_MNHoang_ITITIU21208.list Lab4_MNHoang_ITITIU21208.map default.size.stdout
+	-$(RM) Lab4_TraMinhPhuong_ITITIU21286.bin Lab4_TraMinhPhuong_ITITIU21286.elf Lab4_TraMinhPhuong_ITITIU21286.hex Lab4_TraMinhPhuong_ITITIU21286.list Lab4_TraMinhPhuong_ITITIU21286.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
